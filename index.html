@@ -16,12 +16,14 @@
 
 <div class="container">
   <div style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
-    <svg width="55" id="pallet" height="48" viewBox="0 0 55 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!--<svg width="55" id="pallet" height="48" viewBox="0 0 55 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M41 8.91388V8.89189C40.9901 7.95688 40.367 7.03241 39.3042 7.00083L39.2479 7H7.7521C6.65501 7 6.0102 7.94049 6.00012 8.89189L6 18.351L6.00095 18.3951C6.01483 18.7174 6.1801 19.0112 6.44088 19.1723L12.125 22.6837V35.3775C12.125 35.7358 12.3123 36.0633 12.6087 36.2235L23.1004 41.8945C23.1505 41.9224 23.2031 41.9452 23.2574 41.9623C23.4107 42.0108 23.5781 42.0145 23.7426 41.9623C23.7969 41.9452 23.8495 41.9224 23.8996 41.8945L30.5695 38.2893C30.2383 37.7672 29.9407 37.2217 29.6798 36.6559L24.375 39.5233V18.1232L33.3602 13.7916L39.25 10.9612V17.1558C39.8208 17.0246 40.4049 16.9282 41 16.8691V8.91388V8.91388ZM22.625 39.5223V18.1229L13.7343 13.8369L7.75 10.9611V17.802L13.4341 21.3134C13.6949 21.4745 13.8602 21.7682 13.8741 22.0906L13.875 22.1347V34.7927L22.625 39.5223ZM32.588 12.0923L23.5 16.4595L14.4625 12.1164L7.77345 8.89189H39.2269L32.588 12.0923Z" fill="#333333"/>
       <path d="M42.4 18.2C39.0583 18.2 35.8534 19.5275 33.4905 21.8905C31.1275 24.2534 29.8 27.4583 29.8 30.8C29.8 34.1417 31.1275 37.3466 33.4905 39.7095C35.8534 42.0725 39.0583 43.4 42.4 43.4C43.562 43.4 44.5 42.462 44.5 41.3C44.5 40.754 44.29 40.264 43.954 39.886C43.632 39.522 43.422 39.032 43.422 38.5C43.422 37.338 44.36 36.4 45.522 36.4H48C51.864 36.4 55 33.264 55 29.4C55 23.212 49.358 18.2 42.4 18.2ZM34.7 30.8C33.538 30.8 32.6 29.862 32.6 28.7C32.6 27.538 33.538 26.6 34.7 26.6C35.862 26.6 36.8 27.538 36.8 28.7C36.8 29.862 35.862 30.8 34.7 30.8ZM38.9 25.2C37.738 25.2 36.8 24.262 36.8 23.1C36.8 21.938 37.738 21 38.9 21C40.062 21 41 21.938 41 23.1C41 24.262 40.062 25.2 38.9 25.2ZM45.9 25.2C44.738 25.2 43.8 24.262 43.8 23.1C43.8 21.938 44.738 21 45.9 21C47.062 21 48 21.938 48 23.1C48 24.262 47.062 25.2 45.9 25.2ZM50.1 30.8C48.938 30.8 48 29.862 48 28.7C48 27.538 48.938 26.6 50.1 26.6C51.262 26.6 52.2 27.538 52.2 28.7C52.2 29.862 51.262 30.8 50.1 30.8Z" fill="#333333"/>
-      </svg>
-    <h1>Titan Theme Builder</h1>
+      </svg>-->
+      <img src="Images/neo.svg" width="40" alt="">
+    <h1>Neo Theme Builder</h1>
   </div>
+  <!--Form-->
     <form id="color-calculator">
         <div>
             <label for="color-picker">Pick a color from the  color picker.</label>
@@ -33,51 +35,85 @@
             </button>
           <div id="error" class="error hide"></div>
     </form>
+    <!--Form-->
 
     <div class="output hide">
-        <span style="margin-top: 40px">Hers's your color pallete :3 </span>
-        <div id = "primary-color" class="pallete">Primary-color</div>
-        <div id = "background1" class="pallete">Background-1</div>
-        <div id = "background2" class="pallete">Background-2</div>
-        <div id = "complementary-color" class="pallete">Complementary-color</div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 40px; align-items: center;">
+        <h3>Hers's your color pallete :3</h3> 
+        <button id="download-btn" class="download-csv"><img src="Images/download.svg"></img>Get .csv</button>
+       </div>
+
+      <!--Montonic colors--> 
+      <hr>
+      Monotonic
+        <div id = "primary-color" class="pallete">Primary</div>
+        <div id = "primary-tonal-light-color" class="pallete">Primary tonal light</div>
+      <!--Montonic colors--> 
+
+      <!--Complementray-->
+      <hr>
+      Complementary
+        <div id = "complementary-color" class="pallete">Complementary</div>
+        <div id = "complementary-tonal-light-color" class="pallete">Complementary tonal light</div>
+      <!--Complementray-->
+
+
+      <!--triadic colors-->
+      <hr>
+      Triadic
+        <div id="triadic-color-1" class="pallete"> triadic-color-1 </div>
+        <div id="triadic-color-2" class="pallete"> triadic-color-2 </div>
+        <div id="triadic-tonal-light-color-1" class="pallete"> triadic-color-1 </div>
+        <div id="triadic-tonal-light-color-2" class="pallete"> triadic-color-2 </div>
+      <!--triadic colors-->
+
+      
+      <!--tetradic colors-->
+      <hr>
+      Tetradic
+        <div id="tetradic-color-1" class="pallete"> tetradic-color-1 </div>
+        <div id="tetradic-color-2" class="pallete"> tetradic-color-2 </div>
+        <div id="tetradic-color-3" class="pallete"> tetradic-color-3 </div>
+        <div id="tetradic-tonal-light-color-1" class="pallete"> tetradic-color-1 </div>
+        <div id="tetradic-tonal-light-color-2" class="pallete"> tetradic-color-2 </div>
+        <div id="tetradic-tonal-light-color-3" class="pallete"> tetradic-color-3 </div>
+      <!--tetradic colors-->
+      
+      <hr>
+      Typography
         <div id = "typography" class="pallete">Typography</div>
-        <button id="download-btn" class="download-csv"><img src="Images/download.svg"></img>Download .csv file</button>
     </div>
 </div>
 
 <div class="template hide">
 <div id="intro" class="intro">
-  <img src="https://picsum.photos/400/200?random=1" alt="">
-  <span><h1>Heading Text</h1></span>
-  <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ullam quo, ihil error? Esse rem modi saepe hic officia!</span>
+  <img src="https://picsum.photos/300/300?random=1" style="border-radius: 40px; width: 80px;" alt="">
+  <span><h1>Hello! I’m Nova Grey</h1></span>
+  <span><p>Hi! I’m an independent creator with a passion for uncovering unique stories. From fresh visuals to behind-the-scenes moments, I bring every narrative to life with authenticity and creativity.</p> </span>
+</div>
+
+<div id ="links" class="links">
+  <button class="button">Start now</button>
+  <button class="button">Start now</button>
+  <button class="button">Start now</button>
   <button class="button">Start now</button>
 </div>
 
-<div id="para" class="para">
-  <img src="https://picsum.photos/200/180?random=2" alt="" style="height: 100%;">
-  <div style="display: flex; flex-direction: column; padding: 20px; gap:12px;">
-  <span><h1>Heading Text</h1></span>
-  <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ullam quo</span>
-  <button class="button" id="para-btn">See all</button>
-  </div>
-</div>
-
-<div id="products" class="products">
-  <div class="item">
-  <img src="https://picsum.photos/100/100?random=3" alt="">
-  <span><h1>Heading Text</h1></span>
-  <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ullam quo, ihil error?</span>
+<div id="youtube" class="youtube">
+  <span><h3>Watch the Story Unfold</h3></span>
+  <img src="https://picsum.photos/400/200?random=3" alt="">
   <button class="button">Start now</button>
-  </div>
-  <div class="item">
-    <img src="https://picsum.photos/100/100?random=4" alt="">
-    <span><h1>Heading Text</h1></span>
-    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ullam quo, ihil error?</span>
-    <button class="button">Start now</button>
-  </div>
+</div>
+
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 6px; margin-top: 20px;">
+  <button id="option1" class="option-btn">Option 1</button>
+  <button id="option2" class="option-btn">Option 2</button>
+  <button id="option3" class="option-btn">Option 3</button>
+  <button id="option4" class="option-btn">Option 4</button>
 </div>
 
 </div>
+ 
 
 </div>
 
